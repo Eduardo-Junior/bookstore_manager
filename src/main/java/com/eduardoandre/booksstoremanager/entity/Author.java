@@ -1,14 +1,15 @@
 package com.eduardoandre.booksstoremanager.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-
-//Project loombok methods of replacing Java's default getter, setter and constructors
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+//Project lombok method of replacing Java's default getter, setter and constructors
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
