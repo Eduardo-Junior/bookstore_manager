@@ -1,4 +1,4 @@
-package com.eduardoandre.booksstoremanager.entity;
+package com.eduardoandre.booksstoremanager.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,12 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//Project lombok method of replacing Java's default getter, setter and constructors
-
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id_b;
 
     @Column(nullable = false, unique = true)
     private String name;
@@ -33,5 +31,6 @@ public class Book {
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
-
 }
+
+

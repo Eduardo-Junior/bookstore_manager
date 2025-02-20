@@ -1,4 +1,4 @@
-package com.eduardoandre.booksstoremanager.entity;
+package com.eduardoandre.booksstoremanager.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private String name;

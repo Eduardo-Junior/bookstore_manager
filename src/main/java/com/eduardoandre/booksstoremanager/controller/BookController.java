@@ -2,7 +2,6 @@ package com.eduardoandre.booksstoremanager.controller;
 
 import com.eduardoandre.booksstoremanager.dto.BookDTO;
 import com.eduardoandre.booksstoremanager.dto.MessageResponseDTO;
-import com.eduardoandre.booksstoremanager.entity.Book;
 import com.eduardoandre.booksstoremanager.service.BookService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/V1/books")
 public class BookController {
 
-    private BookService bookService;
+    private final BookService bookService;
 
     @Autowired
     public BookController(BookService bookService) {
@@ -23,7 +22,7 @@ public class BookController {
     }
 
     @PostMapping
-    public MessageResponseDTO create(@RequestBody @Valid BookDTO bookDTO){
+    public MessageResponseDTO create(@Valid @RequestBody BookDTO bookDTO){
         return bookService.create(bookDTO);
     }
 }

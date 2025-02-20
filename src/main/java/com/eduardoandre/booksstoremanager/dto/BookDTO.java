@@ -1,6 +1,6 @@
 package com.eduardoandre.booksstoremanager.dto;
 
-import com.eduardoandre.booksstoremanager.entity.Author;
+import com.eduardoandre.booksstoremanager.entities.Author;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BookDTO {
 
-    private long id;
+    private Long id_b;
 
     @NotBlank
     @Size(max = 200)
