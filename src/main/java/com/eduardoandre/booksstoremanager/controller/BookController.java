@@ -23,6 +23,6 @@ public class BookController {
 
     @PostMapping
     public MessageResponseDTO create(@Valid @RequestBody BookDTO bookDTO){
-        return bookService.create(bookDTO);
+        return bookService.createBook(bookDTO);
     }
 }

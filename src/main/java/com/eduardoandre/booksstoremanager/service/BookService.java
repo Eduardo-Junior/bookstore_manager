@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BookService {
-    private final BookRepository bookRepository;
+    private BookRepository bookRepository;
 
     private final BookMapper bookMapper = BookMapper.INSTANCE;
 
@@ -19,11 +19,10 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public MessageResponseDTO create(BookDTO bookDTO){
-        Book book = bookMapper.toModel(bookDTO) ;
-
+    public MessageResponseDTO createBook(BookDTO bookDTO) {
+        Book book = bookMapper.toModel(bookDTO);
         Book savedBook = bookRepository.save(book);
 
-        return MessageResponseDTO.builder().message("Book created with ID" + savedBook.getId_b()).build();
+        return MessageResponseDTO.builder().message("Book created with id " + savedBook.getId()).build();
     }
 }
