@@ -15,13 +15,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AuthorDTO {
 
-    private Long id;
+    private int id;
 
     @NotBlank
     @Size(max = 200)
     private String name;
 
     @NotNull
-    @Size(max = 100)
     private int age;
 }

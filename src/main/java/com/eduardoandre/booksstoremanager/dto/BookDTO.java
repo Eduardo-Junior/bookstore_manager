@@ -1,9 +1,9 @@
 package com.eduardoandre.booksstoremanager.dto;
 
-import com.eduardoandre.booksstoremanager.entities.Author;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BookDTO {
 
-    private Long id;
+    private int id;
 
     @NotBlank
     @Size(max = 200)
@@ -26,8 +26,11 @@ public class BookDTO {
     @NotNull
     private int pages;
 
-    @NotNull
-    private int isbn;
+    @NotBlank
+    @Size(max = 100)
+    @Pattern(regexp ="(?:ISBN(?:-10)?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$)[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$",
+            message = "ISBN format must be a valid format")
+    private String isbn;
 
     @NotBlank
     @Size(max = 300)
@@ -35,5 +38,5 @@ public class BookDTO {
 
     @NotNull
     @Valid
-    private Author author;
+    private AuthorDTO author;
 }

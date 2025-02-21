@@ -1,7 +1,10 @@
 package com.eduardoandre.booksstoremanager.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
+import lombok.AllArgsConstructor;
 
 @Entity
 @Data

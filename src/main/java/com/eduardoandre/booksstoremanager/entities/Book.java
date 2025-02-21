@@ -1,7 +1,11 @@
 package com.eduardoandre.booksstoremanager.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
+
 
 @Entity
 @Builder
@@ -21,7 +25,7 @@ public class Book {
     private int pages;
 
     @Column(nullable = false)
-    private int isbn;
+    private String isbn;
 
     @Column(name = "publisher_name", nullable = false, unique = true)
     private String publisherName;
