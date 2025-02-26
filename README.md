@@ -67,7 +67,7 @@ Agora que o servidor está rodando, você pode inserir dados usando o **Postman*
    - Selecione o método `POST`.
    - No campo de URL, digite o endereço da API que você deseja interagir. Para este projeto, a URL é:
      ```
-     http://localhost:8080/api/V1/livros
+     http://localhost:8080/api/V1/books
      ```
 
 3. **Configurando o Corpo da Requisição**
