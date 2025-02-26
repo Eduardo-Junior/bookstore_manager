@@ -45,7 +45,7 @@ Antes de rodar o projeto, você precisa ter os seguintes itens instalados na sua
    ```bash
    Crie uma nova pasta, abra seu CMD e digite o comando "cd nome-da-sua-pasta" sem as aspas
    Em seguida execute o seguinte comando: 
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Eduardo-Junior/bookstore_manager.git
 
 
 Para executar o projeto, vá até a pasta onde o projeto foi clonado, entre na pasta criada pelo github e escolha a opção de "Abrir terminal" ao clicar com o botão direito. Após isso, execute o comando "mvn spring-boot:run"
