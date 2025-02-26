@@ -49,3 +49,47 @@ Antes de rodar o projeto, você precisa ter os seguintes itens instalados na sua
 
 
 Para executar o projeto, vá até a pasta onde o projeto foi clonado, entre na pasta criada pelo github e escolha a opção de "Abrir terminal" ao clicar com o botão direito. Após isso, execute o comando "mvn spring-boot:run"
+
+
+### Inserção de Dados (Usando Postman)
+
+Agora que o servidor está rodando, você pode inserir dados usando o **Postman** ou outro método.
+
+#### Passo a Passo no Postman
+
+1. **Abrindo o Postman**
+   
+   Se você ainda não tem o **Postman** instalado, baixe e instale o aplicativo [aqui](https://www.postman.com/downloads/).
+
+2. **Criando uma Requisição POST**
+
+   - Abra o Postman e crie uma nova requisição.
+   - Selecione o método `POST`.
+   - No campo de URL, digite o endereço da API que você deseja interagir. Para este projeto, a URL é:
+     ```
+     http://localhost:8080/api/V1/livros
+     ```
+
+3. **Configurando o Corpo da Requisição**
+
+   - Vá até a aba `Body` do Postman.
+   - Selecione `raw` e no dropdown ao lado, selecione `JSON`.
+   - No campo de texto, cole o seguinte JSON para criar um novo livro:
+
+   ```json
+   {
+       "name": "Inteligentes e Burros",
+       "pages": 180,
+       "isbn": "978-92-95055-02-5",
+       "publisherName": "Livraria Brasil",
+       "author": {
+           "name": "Tereza da Silva",
+           "age": 48
+       }
+   }
+   
+4. **Enviando a requisição**
+
+   - Clique no botão Send para enviar a requisição.
+   - Se tudo correr bem, você receberá uma resposta de sucesso e o livro será inserido no banco de dados.
+
