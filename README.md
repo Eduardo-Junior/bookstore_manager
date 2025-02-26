@@ -10,15 +10,42 @@ O **BookStore Manager** é uma aplicação desenvolvida em **Java Spring Boot** 
 
 Este projeto foi criado seguindo um curso da Udemy para Java Spring Boot.
 
+## Instalação e Execução do Projeto
 
-# BookStore Manager 📚
+### Pré-requisitos
 
-The **BookStore Manager** is an application developed in Java Spring Boot to manage the registration of books in a fictional online store. The purpose of this repository is to share my learning journey with the framework and the Java language, utilizing more advanced concepts like APIs and related features.
+Antes de rodar o projeto, você precisa ter os seguintes itens instalados na sua máquina:
 
-## 🚀 Technologies Used
+1. **Java 11 ou superior**
+   - O projeto foi desenvolvido usando o Java 23. Caso não tenha o Java instalado, siga as instruções de instalação no [site oficial do Java](https://adoptopenjdk.net/).
 
--  **Java Spring Boot**: Framework used to create REST APIs in a simple and fast way.
--  **Project Lombok**: Library to reduce boilerplate code such as getters, setters, constructors, and more.
--  **REST API**: Used for data manipulation and communication with the books' information.
+2. **Apache Maven**
+   - Maven é uma ferramenta de automação de build para projetos Java. Você pode instalá-lo da seguinte maneira:
 
-This project was creating following an Udemy Java course for Spring Boot.
+   **Para instalar o Maven no seu sistema:**
+
+   - **Windows**
+     Use o arquivo de comando powershell disponível aqui: https://www.dropbox.com/scl/fi/r6awqhl7gljqtujznb15s/install_maven.ps1?rlkey=2rsdow6lgq530k6xp4tlq9h8s&st=poc77ml9&dl=0
+
+     O código foi criado pelo incrível **https://gist.github.com/schtritoff**
+
+   - **MacOS / Linux**
+     1. Use o Homebrew (no macOS) ou o gerenciador de pacotes de sua distribuição no Linux:
+        ```bash
+        brew install maven
+        ```
+     2. Se não usar o Homebrew, siga as instruções de instalação na documentação oficial do [Maven](https://maven.apache.org/install.html).
+
+---
+
+### Clonando o Repositório
+
+1. Clone este repositório na sua máquina:
+
+   ```bash
+   Crie uma nova pasta, abra seu CMD e digite o comando "cd nome-da-sua-pasta" sem as aspas
+   Em seguida execute o seguinte comando: 
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+
+
+Para executar o projeto, vá até a pasta onde o projeto foi clonado, entre na pasta criada pelo github e escolha a opção de "Abrir terminal" ao clicar com o botão direito. Após isso, execute o comando "mvn spring-boot:run"
